@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order your custom cake from Sweet Cake House. Personalized designs for birthdays, weddings, and all celebrations.">
+    <title>Custom Cake Order - Sweet Cake House</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header"><nav class="navbar"><div class="container"><div class="nav-wrapper">
+        <div class="logo"><a href="index.html"><h1>🍰 Sweet Cake House</h1></a></div>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="cakes.html" class="nav-link">Cakes</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="custom-order.html" class="nav-link active">Custom Order</a></li>
+            <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div></div></nav></header>
+
+    <main id="main-content">
+        <nav class="breadcrumb"><div class="container"><ul class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Custom Order</li>
+        </ul></div></nav>
+
+        <section class="hero" style="padding: 80px 20px;">
+            <div class="container"><div class="hero-content">
+                <h1 class="hero-title">Custom Cake Order</h1>
+                <p class="hero-description">Design your dream cake - we'll make it a reality!</p>
+            </div></div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tell Us About Your Dream Cake</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle">Fill out the form below and our team will create something amazing for you</p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occasion">Occasion *</label>
+                                <select id="occasion" name="occasion" required>
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="graduation">Graduation</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="date">Delivery Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="size">Cake Size *</label>
+                                <select id="size" name="size" required>
+                                    <option value="">Select Size</option>
+                                    <option value="small">Small (6-8 servings) - 1 lb</option>
+                                    <option value="medium">Medium (10-15 servings) - 2 lbs</option>
+                                    <option value="large">Large (20-25 servings) - 3 lbs</option>
+                                    <option value="xlarge">Extra Large (30-40 servings) - 4 lbs+</option>
+                                    <option value="custom">Custom Size</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="flavor">Preferred Flavor *</label>
+                                <select id="flavor" name="flavor" required>
+                                    <option value="">Select Flavor</option>
+                                    <option value="chocolate">Chocolate</option>
+                                    <option value="vanilla">Vanilla</option>
+                                    <option value="strawberry">Strawberry</option>
+                                    <option value="red-velvet">Red Velvet</option>
+                                    <option value="lemon">Lemon</option>
+                                    <option value="carrot">Carrot</option>
+                                    <option value="mixed">Mixed Flavors</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="design">Design Description *</label>
+                                <textarea id="design" name="design" rows="5" placeholder="Describe your desired cake design, colors, theme, decorations, etc." required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="text">Text on Cake (if any)</label>
+                                <input type="text" id="text" name="text" placeholder="e.g., Happy Birthday Sarah!">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Budget Range (PKR)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select Budget</option>
+                                    <option value="3000-5000">Rs 3,000 - 5,000</option>
+                                    <option value="5000-8000">Rs 5,000 - 8,000</option>
+                                    <option value="8000-12000">Rs 8,000 - 12,000</option>
+                                    <option value="12000+">Rs 12,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="special">Special Requirements</label>
+                                <textarea id="special" name="special" rows="3" placeholder="Dietary restrictions, allergies, delivery instructions, etc."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Custom Order</button>
+
+                            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light); text-align: center;">
+                                *Our team will contact you within 24 hours to discuss your order and provide a quote
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Order Custom?</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <article class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3 class="feature-title">Unique Design</h3>
+                        <p class="feature-description">Your vision, our expertise - create something truly one-of-a-kind</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3 class="feature-title">Perfect Match</h3>
+                        <p class="feature-description">Tailored to your theme, colors, and preferences</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">👨‍🍳</span>
+                        <h3 class="feature-title">Expert Crafted</h3>
+                        <p class="feature-description">Handmade by professional bakers with attention to detail</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">💝</span>
+                        <h3 class="feature-title">Memorable</h3>
+                        <p class="feature-description">Create lasting impressions at your special event</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🍰 Sweet Cake House</h3>
+                <p>Baking happiness since 2016</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💬</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📍 DHA Phase 1, Karachi</p>
+                <p>📞 +92 316 0608032</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sweet Cake House. All rights reserved. Made with ❤️ and sugar!</p>
+        </div>
+    </div></footer>
+</body>
+</html>

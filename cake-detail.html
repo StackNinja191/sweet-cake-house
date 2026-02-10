@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View detailed information about our delicious cakes - ingredients, sizes, and ordering options.">
+    <title>Cake Details - Sweet Cake House</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><h1>🍰 Sweet Cake House</h1></a></div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="cakes.html" class="nav-link active">Cakes</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="custom-order.html" class="nav-link">Custom Order</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="cart.html" class="nav-link cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <nav class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cakes.html">Cakes</a></li>
+                    <li class="breadcrumb-item active" id="breadcrumb-name">Loading...</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="about" style="padding: 60px 20px;">
+            <div class="container">
+                <div class="cake-detail-container">
+                    <!-- Cake Image -->
+                    <div class="cake-detail-image">
+                        <img src="assets/dreamcake.jpg" alt="Chocolate Dream Cake" id="cake-image">
+                        <span class="badge-bestseller">Bestseller</span>
+                    </div>
+
+                    <!-- Cake Details -->
+                    <div class="cake-detail-info">
+                        <h1 class="cake-detail-title" id="cake-name">Chocolate Dream Cake</h1>
+                        
+                        <div class="cake-detail-meta">
+                            <span class="cake-detail-rating">⭐⭐⭐⭐⭐ (127 reviews)</span>
+                        </div>
+
+                        <p class="cake-detail-description">
+                            A rich, moist chocolate cake layered with creamy chocolate frosting. Made with premium Belgian chocolate and topped with decorative chocolate shavings. Perfect for chocolate lovers!
+                        </p>
+
+                        <!-- Order Form -->
+                        <div class="order-form">
+                            <div class="form-group">
+                                <label for="cake-weight">Select Weight / Size:</label>
+                                <select id="cake-weight" class="form-select">
+                                    <option value="1" data-price="5000">1 lb (6-8 servings) - Rs 5,000</option>
+                                    <option value="2" data-price="9000">2 lbs (10-15 servings) - Rs 9,000</option>
+                                    <option value="3" data-price="13000">3 lbs (20-25 servings) - Rs 13,000</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cake-quantity">Quantity:</label>
+                                <div class="quantity-selector">
+                                    <button type="button" class="qty-btn" id="qty-minus">-</button>
+                                    <input type="number" id="cake-quantity" value="1" min="1" max="10" readonly>
+                                    <button type="button" class="qty-btn" id="qty-plus">+</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cake-message">Message on Cake (Optional):</label>
+                                <input type="text" id="cake-message" class="form-input" placeholder="e.g., Happy Birthday!" maxlength="50">
+                                <small class="form-hint">Maximum 50 characters</small>
+                            </div>
+
+                            <div class="price-display">
+                                <span class="price-label">Total Price:</span>
+                                <span class="price-value" id="total-price">Rs 5,000</span>
+                            </div>
+
+                            <div class="cake-detail-actions">
+                                <button class="btn btn-primary btn-large" id="add-to-cart-btn">
+                                    🛒 Add to Cart
+                                </button>
+                                <button class="btn btn-secondary btn-large" id="customize-btn" onclick="window.location.href='customize-cake.html'">
+                                    🎨 Customize This Cake
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Key Features -->
+                        <div class="cake-features">
+                            <h3>Key Features:</h3>
+                            <ul class="features-list">
+                                <li>✓ Premium Belgian chocolate</li>
+                                <li>✓ Fresh, handmade daily</li>
+                                <li>✓ Customizable design</li>
+                                <li>✓ Free delivery in select areas</li>
+                                <li>✓ 24-hour advance order required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- You May Also Like Section -->
+        <section class="cakes">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">You May Also Like</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="cakes-grid">
+                    <article class="cake-card">
+                        <div class="cake-image">
+                            <img src="assets/vanilla.jpg" alt="Vanilla Cake">
+                        </div>
+                        <div class="cake-info">
+                            <h3 class="cake-name">Classic Vanilla</h3>
+                            <p class="cake-description">Light and fluffy vanilla sponge cake</p>
+                            <div class="cake-meta">
+                                <p class="cake-price">Rs 6,500</p>
+                                <span class="cake-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <a href="cake-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </article>
+                    <article class="cake-card">
+                        <div class="cake-image">
+                            <img src="assets/redwelvet.jpg" alt="Red Velvet">
+                        </div>
+                        <div class="cake-info">
+                            <h3 class="cake-name">Red Velvet</h3>
+                            <p class="cake-description">Velvety smooth with cream cheese frosting</p>
+                            <div class="cake-meta">
+                                <p class="cake-price">Rs 7,000</p>
+                                <span class="cake-rating">⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <a href="cake-detail.html" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🍰 Sweet Cake House</h3>
+                    <p>Baking happiness since 2016</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 DHA Phase 1, Karachi</p>
+                    <p>📞 +92 316 0608032</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sweet Cake House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/cake-detail.js"></script>
+</body>
+</html>

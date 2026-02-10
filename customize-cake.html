@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize your dream cake exactly the way you want it">
+    <title>Customize Your Cake - Sweet Cake House</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><h1>🍰 Sweet Cake House</h1></a></div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="cakes.html" class="nav-link">Cakes</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="custom-order.html" class="nav-link active">Custom Order</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="cart.html" class="nav-link cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <nav class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Customize Cake</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="hero" style="padding: 60px 20px; background: linear-gradient(135deg, var(--background-lighter) 0%, var(--background-light) 100%);">
+            <div class="container">
+                <div class="hero-content" style="text-align: center;">
+                    <h1 class="hero-title">🎨 Customize Your Dream Cake</h1>
+                    <p class="hero-description">Design every detail of your perfect cake - flavor, shape, colors, and decorations!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="customize-section">
+            <div class="container">
+                <form id="customize-form" class="customize-form">
+                    
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">👤 Your Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="custom-name">Full Name *</label>
+                                <input type="text" id="custom-name" name="customName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="custom-phone">Phone Number *</label>
+                                <input type="tel" id="custom-phone" name="customPhone" placeholder="+92 300 1234567" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="custom-email">Email Address *</label>
+                            <input type="email" id="custom-email" name="customEmail" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Cake Basics -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">🎂 Cake Basics</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cake-occasion">Occasion *</label>
+                                <select id="cake-occasion" name="cakeOccasion" required>
+                                    <option value="">Select Occasion</option>
+                                    <option value="birthday">Birthday</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="graduation">Graduation</option>
+                                    <option value="corporate">Corporate Event</option>
+                                    <option value="baby-shower">Baby Shower</option>
+                                    <option value="engagement">Engagement</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cake-date">Event Date *</label>
+                                <input type="date" id="cake-date" name="cakeDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cake-flavor">Cake Flavor *</label>
+                                <select id="cake-flavor" name="cakeFlavor" required>
+                                    <option value="">Select Flavor</option>
+                                    <option value="chocolate">Rich Chocolate</option>
+                                    <option value="vanilla">Classic Vanilla</option>
+                                    <option value="red-velvet">Red Velvet</option>
+                                    <option value="strawberry">Fresh Strawberry</option>
+                                    <option value="lemon">Lemon Zest</option>
+                                    <option value="coffee">Coffee Mocha</option>
+                                    <option value="carrot">Carrot Walnut</option>
+                                    <option value="pineapple">Pineapple</option>
+                                    <option value="black-forest">Black Forest</option>
+                                    <option value="mixed">Mixed Flavors</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cake-size">Cake Size/Weight *</label>
+                                <select id="cake-size" name="cakeSize" required>
+                                    <option value="">Select Size</option>
+                                    <option value="1lb">1 lb (6-8 servings)</option>
+                                    <option value="2lb">2 lbs (10-15 servings)</option>
+                                    <option value="3lb">3 lbs (20-25 servings)</option>
+                                    <option value="4lb">4 lbs (30-35 servings)</option>
+                                    <option value="5lb">5 lbs (40-50 servings)</option>
+                                    <option value="custom">Custom Size (specify below)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design Specifications -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">🎨 Design & Appearance</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cake-shape">Cake Shape *</label>
+                                <select id="cake-shape" name="cakeShape" required>
+                                    <option value="">Select Shape</option>
+                                    <option value="round">Round</option>
+                                    <option value="square">Square</option>
+                                    <option value="rectangle">Rectangle</option>
+                                    <option value="heart">Heart</option>
+                                    <option value="number">Number Shape</option>
+                                    <option value="custom">Custom Shape</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cake-layers">Number of Layers *</label>
+                                <select id="cake-layers" name="cakeLayers" required>
+                                    <option value="">Select Layers</option>
+                                    <option value="1">Single Layer</option>
+                                    <option value="2">Two Layers</option>
+                                    <option value="3">Three Layers</option>
+                                    <option value="multi">Multi-tier</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-theme">Theme / Style *</label>
+                            <input type="text" id="cake-theme" name="cakeTheme" placeholder="e.g., Unicorn, Floral, Minimalist, Princess, Superhero" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-colors">Color Preferences *</label>
+                            <input type="text" id="cake-colors" name="cakeColors" placeholder="e.g., Pink and Gold, Pastel Blue, Rainbow, Elegant White" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-text">Text on Cake</label>
+                            <input type="text" id="cake-text" name="cakeText" placeholder="e.g., Happy Birthday Sarah!, Congratulations!" maxlength="100">
+                            <small class="form-hint">Maximum 100 characters</small>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">✨ Additional Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="cake-decorations">Decoration Preferences</label>
+                            <textarea id="cake-decorations" name="cakeDecorations" rows="4" placeholder="Describe decorations you'd like: flowers, figurines, photo print, edible images, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-reference">Reference Image Upload (Optional)</label>
+                            <input type="file" id="cake-reference" name="cakeReference" accept="image/*" class="file-input">
+                            <small class="form-hint">Upload a reference image to help us understand your vision (Max 5MB, JPG/PNG)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-special">Special Instructions / Dietary Requirements</label>
+                            <textarea id="cake-special" name="cakeSpecial" rows="3" placeholder="Egg-free, sugar-free, nut allergies, delivery instructions, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cake-budget">Budget Range (PKR)</label>
+                            <select id="cake-budget" name="cakeBudget">
+                                <option value="">Select Budget Range</option>
+                                <option value="5000-8000">Rs 5,000 - 8,000</option>
+                                <option value="8000-12000">Rs 8,000 - 12,000</option>
+                                <option value="12000-18000">Rs 12,000 - 18,000</option>
+                                <option value="18000-25000">Rs 18,000 - 25,000</option>
+                                <option value="25000+">Rs 25,000+</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            🎉 Submit Custom Order Request
+                        </button>
+                        <a href="cakes.html" class="btn btn-secondary btn-large">
+                            Cancel
+                        </a>
+                    </div>
+
+                    <div class="form-note">
+                        <p>📞 <strong>Our expert bakers will contact you within 24 hours</strong> to discuss your design, provide a detailed quote, and finalize all the details of your custom cake!</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Why Customize Section -->
+        <section class="features" style="background: var(--background-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Custom Design?</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">🎨</span>
+                        <h3 class="feature-title">Unique Design</h3>
+                        <p class="feature-description">Your vision, our expertise - create something truly one-of-a-kind</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🎯</span>
+                        <h3 class="feature-title">Perfect Match</h3>
+                        <p class="feature-description">Tailored to your theme, colors, and event requirements</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">👨‍🍳</span>
+                        <h3 class="feature-title">Expert Crafted</h3>
+                        <p class="feature-description">Handmade by professional bakers with years of experience</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">💝</span>
+                        <h3 class="feature-title">Memorable</h3>
+                        <p class="feature-description">Create lasting impressions at your special celebration</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🍰 Sweet Cake House</h3>
+                    <p>Baking happiness since 2016</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 DHA Phase 1, Karachi</p>
+                    <p>📞 +92 316 0608032</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sweet Cake House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+</html>

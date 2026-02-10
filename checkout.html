@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout - Complete your cake order">
+    <title>Checkout - Sweet Cake House</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><h1>🍰 Sweet Cake House</h1></a></div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="cakes.html" class="nav-link">Cakes</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="custom-order.html" class="nav-link">Custom Order</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="cart.html" class="nav-link cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <nav class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Cart</a></li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="checkout-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">💳 Checkout</h1>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="checkout-layout">
+                    <!-- Checkout Form -->
+                    <div class="checkout-form-container">
+                        <form id="checkout-form" class="checkout-form">
+                            <!-- Customer Information -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">📋 Customer Information</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="customer-name">Full Name *</label>
+                                        <input type="text" id="customer-name" name="customerName" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="customer-phone">Phone Number *</label>
+                                        <input type="tel" id="customer-phone" name="customerPhone" placeholder="+92 300 1234567" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="customer-email">Email Address *</label>
+                                    <input type="email" id="customer-email" name="customerEmail" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Delivery Information -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">🚚 Delivery Information</h3>
+                                
+                                <div class="form-group">
+                                    <label for="delivery-address">Delivery Address *</label>
+                                    <textarea id="delivery-address" name="deliveryAddress" rows="3" placeholder="House/Flat No, Street, Area" required></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="delivery-city">City *</label>
+                                        <select id="delivery-city" name="deliveryCity" required>
+                                            <option value="">Select City</option>
+                                            <option value="karachi">Karachi</option>
+                                            <option value="lahore">Lahore</option>
+                                            <option value="islamabad">Islamabad</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="delivery-area">Area/Locality *</label>
+                                        <input type="text" id="delivery-area" name="deliveryArea" placeholder="e.g., DHA Phase 5" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="delivery-date">Delivery Date *</label>
+                                        <input type="date" id="delivery-date" name="deliveryDate" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="delivery-time">Preferred Time *</label>
+                                        <select id="delivery-time" name="deliveryTime" required>
+                                            <option value="">Select Time</option>
+                                            <option value="morning">Morning (9 AM - 12 PM)</option>
+                                            <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                            <option value="evening">Evening (4 PM - 8 PM)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="delivery-instructions">Delivery Instructions (Optional)</label>
+                                    <textarea id="delivery-instructions" name="deliveryInstructions" rows="2" placeholder="Any special instructions for delivery"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">💰 Payment Method</h3>
+                                
+                                <div class="payment-methods">
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="cod" checked>
+                                        <div class="payment-card">
+                                            <span class="payment-icon">💵</span>
+                                            <div>
+                                                <strong>Cash on Delivery</strong>
+                                                <p>Pay when you receive your order</p>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="bank">
+                                        <div class="payment-card">
+                                            <span class="payment-icon">🏦</span>
+                                            <div>
+                                                <strong>Bank Transfer</strong>
+                                                <p>Transfer to our bank account</p>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="paymentMethod" value="easypaisa">
+                                        <div class="payment-card">
+                                            <span class="payment-icon">📱</span>
+                                            <div>
+                                                <strong>EasyPaisa / JazzCash</strong>
+                                                <p>Mobile wallet payment</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="payment-note">
+                                    <p><strong>Note:</strong> For online payments, our team will contact you with payment details after order confirmation.</p>
+                                </div>
+                            </div>
+
+                            <!-- Additional Notes -->
+                            <div class="form-section">
+                                <div class="form-group">
+                                    <label for="order-notes">Additional Notes (Optional)</label>
+                                    <textarea id="order-notes" name="orderNotes" rows="3" placeholder="Any special requests or dietary requirements"></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large btn-block" id="place-order-btn">
+                                🎉 Place Order
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="checkout-summary">
+                        <h3>📦 Order Summary</h3>
+                        
+                        <div id="checkout-items" class="checkout-items">
+                            <!-- Order items will be loaded here -->
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">Rs 0</span>
+                        </div>
+
+                        <div class="summary-row">
+                            <span>Delivery Fee:</span>
+                            <span id="checkout-delivery">Rs 300</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-row summary-total">
+                            <span>Total Amount:</span>
+                            <span id="checkout-total">Rs 0</span>
+                        </div>
+
+                        <div class="checkout-features">
+                            <div class="feature-item">
+                                <span>✓</span>
+                                <span>Secure checkout</span>
+                            </div>
+                            <div class="feature-item">
+                                <span>✓</span>
+                                <span>Fresh ingredients</span>
+                            </div>
+                            <div class="feature-item">
+                                <span>✓</span>
+                                <span>On-time delivery</span>
+                            </div>
+                            <div class="feature-item">
+                                <span>✓</span>
+                                <span>Quality guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🍰 Sweet Cake House</h3>
+                    <p>Baking happiness since 2016</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 DHA Phase 1, Karachi</p>
+                    <p>📞 +92 316 0608032</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sweet Cake House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

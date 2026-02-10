@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order confirmation - Your order has been successfully placed">
+    <title>Order Success - Sweet Cake House</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .success-animation {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .checkmark-circle {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out;
+        }
+        .checkmark {
+            font-size: 4rem;
+            color: white;
+            animation: checkmarkPop 0.5s ease-out 0.3s backwards;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        @keyframes checkmarkPop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><h1>🍰 Sweet Cake House</h1></a></div>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="cakes.html" class="nav-link">Cakes</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="custom-order.html" class="nav-link">Custom Order</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="cart.html" class="nav-link cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="success-section" style="padding: 80px 20px; min-height: 70vh;">
+            <div class="container">
+                
+                <!-- Success Animation -->
+                <div class="success-animation">
+                    <div class="checkmark-circle">
+                        <span class="checkmark">✓</span>
+                    </div>
+                    <h1 style="font-size: 2.5rem; color: var(--success-color); margin-bottom: 1rem;">Order Placed Successfully!</h1>
+                    <p style="font-size: 1.2rem; color: var(--text-medium); margin-bottom: 3rem;">Thank you for your order! We're excited to bake something delicious for you! 🎉</p>
+                </div>
+
+                <!-- Order Summary Card -->
+                <div class="order-success-card">
+                    <div class="order-header">
+                        <h2>📦 Order Summary</h2>
+                        <div class="order-id">
+                            <strong>Order ID:</strong> <span id="order-id">SCH-2026-0001</span>
+                        </div>
+                    </div>
+
+                    <div class="order-details">
+                        <!-- Customer Info -->
+                        <div class="detail-section">
+                            <h3>👤 Customer Information</h3>
+                            <div class="detail-row">
+                                <span class="detail-label">Name:</span>
+                                <span class="detail-value" id="customer-name">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Phone:</span>
+                                <span class="detail-value" id="customer-phone">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Email:</span>
+                                <span class="detail-value" id="customer-email">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Info -->
+                        <div class="detail-section">
+                            <h3>🚚 Delivery Information</h3>
+                            <div class="detail-row">
+                                <span class="detail-label">Address:</span>
+                                <span class="detail-value" id="delivery-address">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Date:</span>
+                                <span class="detail-value" id="delivery-date">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Time:</span>
+                                <span class="detail-value" id="delivery-time">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Items -->
+                        <div class="detail-section">
+                            <h3>🎂 Your Order</h3>
+                            <div id="order-items-list">
+                                <!-- Items will be loaded here -->
+                            </div>
+                        </div>
+
+                        <!-- Payment Summary -->
+                        <div class="detail-section">
+                            <h3>💰 Payment Summary</h3>
+                            <div class="summary-table">
+                                <div class="summary-row">
+                                    <span>Subtotal:</span>
+                                    <span id="summary-subtotal">Rs 0</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Delivery Fee:</span>
+                                    <span id="summary-delivery">Rs 300</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-row summary-total">
+                                    <span><strong>Total Amount:</strong></span>
+                                    <span><strong id="summary-total">Rs 0</strong></span>
+                                </div>
+                                <div class="payment-method-info">
+                                    <span class="detail-label">Payment Method:</span>
+                                    <span class="detail-value" id="payment-method">Cash on Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What Happens Next -->
+                <div class="next-steps-card">
+                    <h3>📋 What Happens Next?</h3>
+                    <div class="steps-timeline">
+                        <div class="timeline-step">
+                            <div class="step-icon">1️⃣</div>
+                            <div class="step-content">
+                                <h4>Order Confirmation</h4>
+                                <p>You'll receive a confirmation call/SMS from our team within 2 hours</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon">2️⃣</div>
+                            <div class="step-content">
+                                <h4>Cake Preparation</h4>
+                                <p>Our expert bakers will prepare your fresh cake with love and care</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon">3️⃣</div>
+                            <div class="step-content">
+                                <h4>Quality Check</h4>
+                                <p>We ensure everything is perfect before delivery</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon">4️⃣</div>
+                            <div class="step-content">
+                                <h4>Delivery</h4>
+                                <p>Your cake will be delivered fresh on your chosen date and time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="success-actions">
+                    <a href="cakes.html" class="btn btn-primary">🎂 Order More Cakes</a>
+                    <a href="index.html" class="btn btn-secondary">🏠 Back to Home</a>
+                    <button class="btn btn-outline" onclick="window.print()">🖨️ Print Receipt</button>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="contact-card">
+                    <h4>Need Help?</h4>
+                    <p>If you have any questions about your order, feel free to contact us:</p>
+                    <div class="contact-info">
+                        <a href="tel:+923160608032">📞 +92 316 0608032</a>
+                        <a href="contact.html">📧 Contact Form</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🍰 Sweet Cake House</h3>
+                    <p>Baking happiness since 2016</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 DHA Phase 1, Karachi</p>
+                    <p>📞 +92 316 0608032</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sweet Cake House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/order-success.js"></script>
+</body>
+</html>
